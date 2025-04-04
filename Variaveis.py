@@ -1,6 +1,15 @@
 # Entrada de string
 text = str(input('Qual o seu nome: '))  # str
-print(f'Prazer em conhecer você, {text}!')
+print(f"""Prazer em conhecer você, {text}!
+\nSó tem espaços: {text.isspace()}
+Seu nome é um número: {text.isnumeric()}
+Seu nome é um alfábetico: {text.isalpha()}
+Seu nome possui letra e número: {text.isalnum()}
+Está em MAIUSCULA: {text.isupper()}
+Está em minuscula:{text.islower()}
+Está Capitalizada: {text.istitle()}
+""")
+
 
 # Entrada de dados
 num_int = int(input('\nDigite um valor inteiro: '))  # int
