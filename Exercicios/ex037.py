@@ -1,9 +1,14 @@
-nome = str(input('Qual seu nome: '))
-if nome == 'Daniel':
-    print(f'Que nome feio você tem {nome}!')
-elif nome == 'José' or nome == 'Maria':
-    print('Seu nome é muito comum no Brasil!')
-elif nome in 'Ana Fernanda Claudia Juliana':
-    print('Belo nome feminino!')
+n = int(input('Digite um némero inteiro: '))
+print("""Escolha uma das opçãoes abaixo:
+[ 1 ] Converter para Binario
+[ 2 ] Converter para Octal
+[ 3 ] Converter para Hexagonal""")
+op = int (input('Sua opção: '))
+if op == 1 :
+    print(f'{n} Convertido para binario é igual a {bin(n)[2:]}')
+elif op == 2:
+    print(f'{n} Convertido para Octal é igual a {oct(n)[2:]}')
+elif op == 3:
+    print(f'{n} Convertido para Hexagonal é igual a {hex(n)[2:]}')
 else:
-    print('Você tem um nome comum')
+    print('Opção invalida, Tente novamente!')

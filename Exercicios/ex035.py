@@ -1,11 +1,10 @@
-valor = float(input('Valor da casa: '))
-salario = float(input('Salario do comprador: '))
-anos = int(input('Quantos anos de financiamento: '))
-prestacao = valor / (anos * 12)
-minimo = salario * 30 / 100
-print(f'Para pagar a casa de {valor} em {anos} anos')
-print(f'A prestação será de R${prestacao:.2f}')
-if prestacao <= minimo:
-    print('Emprestimo pode ser \033[32mCONCEDIDO')
+print('=' * 30)
+print('Anlizador de triangulos')
+print('=' * 30)
+a = float(input('Primeiro segmento: '))
+b = float(input('Segundo segmento: '))
+c = float(input('Terceiro segmento: '))
+if a < b + c and b < a +c and c < a + b:
+    print('Os seguimentos \033[31mPODEM\033[m formar um triangulo')
 else:
-    print('Emprestimo \033[31mNEGADO')
+    print('Os segmentos NÃO PODEM formar um triangulo')

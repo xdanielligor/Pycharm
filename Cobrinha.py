@@ -12,21 +12,24 @@ pygame.init()
 branco = (255, 255, 255)    # Cor branca
 vermelho = (213, 50, 80)    # Cor vermelha (mensagens de fim de jogo)
 preto = (0, 0, 0)           # Cor preta (cor da cobrinha)
-azul = (50, 153, 213)       # Cor de fundo da tela
-verde = (0, 255, 0)         # Cor da comida
+azul = (255, 255, 255)       # Cor de fundo da tela
+verde = (213, 50, 80)         # Cor da comida
 
 # Define as dimensões da janela do jogo
 largura = 800
 altura = 400
+
 # Cria a janela com essas dimensões
 tela = pygame.display.set_mode((largura, altura))
+
 # Define o título da janela
 pygame.display.set_caption('Jogo da Cobrinha')
 
 # Define o tamanho de cada "bloco" da cobra (pixels)
 tamanho_bloco = 20
+
 # Define a velocidade de atualização da tela (FPS)
-velocidade = 15
+velocidade = 10
 
 # Define a fonte e tamanho do texto usado nas mensagens
 fonte = pygame.font.SysFont("bahnschrift", 20)

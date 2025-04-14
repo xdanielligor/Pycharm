@@ -1,6 +1,4 @@
-n = int(input('Me diga qualquer número: '))
-cal = n % 2
-if cal == 0:
-    print(f'O número {n} é PAR!')
-else:
-    print(f'O número {n} é IMPAR!')
+velocidade = float(input('Velocidade atual: '))
+if velocidade > 80:
+    print(f'Multado!!! Você exedeu o limite permitido que é 80km/h você deve pagar a multa de R${(velocidade - 80) * 7}')
+print('Tenha um bom dia! Dirija com segurança!')

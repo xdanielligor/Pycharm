@@ -1,10 +1,7 @@
-n = int(input('Informe um número: '))
-u = n//1%10
-d = n //1%100
-c = n // 1%1000
-m = n // 1%10000
-print(f'Analizando o número {n}')
-print(f'Unidade: {u}')
-print(f'Dezena: {d}')
-print(f'Centena: {c}')
-print(f'Milhar: {m}')
+n = str(input('Digite seu nome completo: ')).strip()
+print('Analizando seu nome...')
+print(f'Seu nome em MAIÚSCULA é {n.upper()}')
+print(f'Seu nome em minusculo é {n.lower()}')
+print(f'Seu nome ao todo tem {len(n) - n.count(' ')} letras')
+separa = n.split()
+print(f'Seu primeiro nome è {separa[0]} e ele tem {len(separa[0])} letras')

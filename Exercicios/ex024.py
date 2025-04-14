@@ -1,2 +1,3 @@
-nome = str(input('Digite seu nome completo: '))
-print(f'Seu nome tem Ferreira? {'FERREIRA' in nome.upper()}')
+cidade = str(input('Em que cidade você nasceu? ')).strip()
+m = cidade.upper()
+print('SANTO' in m)

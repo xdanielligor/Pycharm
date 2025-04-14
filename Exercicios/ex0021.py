@@ -1,7 +1,0 @@
-n = str(input('Digite seu nome completo: ')).strip()
-print('Analizando seu nome...')
-print(f'Seu nome em MAIÚSCULA é {n.upper()}')
-print(f'Seu nome em minusculo é {n.lower()}')
-print(f'Seu nome ao todo tem {len(n) - n.count(' ')} letras')
-separa = n.split()
-print(f'Seu primeiro nome è {separa[0]} e ele tem {len(separa[0])} letras')

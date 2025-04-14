@@ -1,14 +1,11 @@
-n = int(input('Digite um némero inteiro: '))
-print("""Escolha uma das opçãoes abaixo:
-[ 1 ] Converter para Binario
-[ 2 ] Converter para Octal
-[ 3 ] Converter para Hexagonal""")
-op = int (input('Sua opção: '))
-if op == 1 :
-    print(f'{n} Convertido para binario é igual a {bin(n)[2:]}')
-elif op == 2:
-    print(f'{n} Convertido para Octal é igual a {oct(n)[2:]}')
-elif op == 3:
-    print(f'{n} Convertido para Hexagonal é igual a {hex(n)[2:]}')
+valor = float(input('Valor da casa: '))
+salario = float(input('Salario do comprador: '))
+anos = int(input('Quantos anos de financiamento: '))
+prestacao = valor / (anos * 12)
+minimo = salario * 30 / 100
+print(f'Para pagar a casa de {valor} em {anos} anos')
+print(f'A prestação será de R${prestacao:.2f}')
+if prestacao <= minimo:
+    print('Emprestimo pode ser \033[32mCONCEDIDO')
 else:
-    print('Opção invalida, Tente novamente!')
+    print('Emprestimo \033[31mNEGADO')
