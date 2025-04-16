@@ -1,47 +1,54 @@
-import pygame
 
-# Inicializa o Pygame
-pygame.init()
+class No:
+    def __init__(self, valor):
+        self.valor = valor
+        self.esquerda = None
+        self.direita = None
 
-# Tamanho da janela
-largura, altura = 800, 600
-tela = pygame.display.set_mode((largura, altura))
-pygame.display.set_caption("Jogo com Sprite")
+    def mostra_no(self):
+        print(self.valor)
 
-# Cores
-BRANCO = (255, 255, 255)
 
-# FPS
-clock = pygame.time.Clock()
-fps = 60
+class ArvoreBinariaBusca:
+    def __init__(self):
+        self.raiz = None
 
-# Carregando uma imagem como sprite
-sprite_img = pygame.image.load("personagem_1.png")
-sprite_rect = sprite_img.get_rect()
-sprite_rect.topleft = (100, 100)
+    def inserir(self, valor):
+        novo = No(valor)
+        if self.raiz is None:
+            self.raiz = novo
+        else:
+            atual = self.raiz
+            while True:
+                pai = atual
+                if valor < atual.valor:
+                    atual = atual.esquerda
+                    if atual is None:
+                        pai.esquerda = novo
+                        return
+                else:
+                    atual = atual.direita
+                    if atual is None:
+                        pai.direita = novo
+                        return
 
-# Loop principal
-rodando = True
-while rodando:
-    for evento in pygame.event.get():
-        if evento.type == pygame.QUIT:
-            rodando = False
+    def mostrar_em_ordem(self, no=None):
+        if no is None:
+            no = self.raiz
+        if no is not None:
+            self.mostrar_em_ordem(no.esquerda)
+            print(no.valor, end=" ")
+            self.mostrar_em_ordem(no.direita)
 
-    # Movimentação com teclas
-    teclas = pygame.key.get_pressed()
-    if teclas[pygame.K_LEFT]:
-        sprite_rect.x -= 5
-    if teclas[pygame.K_RIGHT]:
-        sprite_rect.x += 5
-    if teclas[pygame.K_UP]:
-        sprite_rect.y -= 5
-    if teclas[pygame.K_DOWN]:
-        sprite_rect.y += 5
+    # NOVO: imprime a estrutura visualmente
+    def imprimir_estrutura(self, no=None, nivel=0):
+        if no is None:
+            no = self.raiz
+        if no.direita:
+            self.imprimir_estrutura(no.direita, nivel + 1)
+        print("     " * nivel + f"-> {no.valor}")
+        if no.esquerda:
+            self.imprimir_estrutura(no.esquerda, nivel + 1)
 
-    # Atualiza a tela
-    tela.fill(BRANCO)
-    tela.blit(sprite_img, sprite_rect)
-    pygame.display.update()
-    clock.tick(fps)
 
-pygame.quit()
+
