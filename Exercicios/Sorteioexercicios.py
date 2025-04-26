@@ -5,7 +5,8 @@ print('''Que tipo de exercicio você quer
 [ 3 ] \033[33mModulos\033[m
 [ 4 ] \033[34mManipulação de texto\033[m
 [ 5 ] \033[35mCondições\033[m
-[ 6 ] \033[36mRepetição For\033[m''')
+[ 6 ] \033[36mRepetição For\033[m
+[ 7 ] \033[37mRepetição While\033[m''')
 n = int(input('Escolha: '))
 if n == 1:
     num = random.randint(1,4)
@@ -24,6 +25,9 @@ elif n == 5:
     print(f'O exercicio sorteado foi {num}')
 elif n == 6:
     num = random.randint(46, 56)
+    print(f'O exercicio sorteado foi {num}')
+elif n == 7:
+    num = random.randint(57, 65)
     print(f'O exercicio sorteado foi {num}')
 else:
     print('Opção Invalida!')
