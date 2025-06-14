@@ -1,4 +1,11 @@
-a = (1 ,5, 5)
-b = (4, 5, 6, 7)
-c = a+b
-print (c.count(5))
+count = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete',
+         'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze',
+         'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
+
+while True:
+    num = int(input('Digite um número entre 0 e 20: '))
+    if 0 <= num <= 20:
+        break
+    print('Tente novamente', end=' ')
+
+print(f'Você digitou o número {count[num]}')
